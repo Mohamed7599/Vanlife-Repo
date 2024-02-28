@@ -13,6 +13,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #FFF7ED;
+
 }
 
 h1 {
@@ -223,19 +225,29 @@ a {
   display: flex;
   flex-direction: column;
   transition: box-shadow 300ms;
-  width: 18rem;
-
+  width: 16rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  padding: 0 0 0.5em 0;
+  cursor: default;
 }
 
 .van-card>img {
   border-radius: 8px 8px 0 0;
+
 }
 
-.card-content {
+.card-content-about {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0.5em;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+
 }
 
 .price {
@@ -247,18 +259,31 @@ a {
 }
 
 .van-type {
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.9rem;
   color: #FFEAD0;
-  margin: 0.5em 0;
+  padding: 0.3em 0.5em;
   font-style: normal;
+  border-radius: 4px;
+  margin: 0 0.5em;
 
 }
 
 .simple {
-  background-color: '#E17654';
+  background-color: #E17654;
 
 }
 
+.luxury {
+
+  background-color: #161616;
+}
+
 .rugged {
-  background-color: '#FF8C38';
+  background-color: #115E59;
+}
+
+.card-content-about h3:hover {
+  color: #FF6F05;
+  cursor: pointer;
 }

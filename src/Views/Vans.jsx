@@ -1,17 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import useVans from '../../HOOKS/UseVans.jsx';
 const Vans = () => {
+    const navigate = useNavigate();
     const vans = useVans();
     const vanElement = vans.map((van) => {
         return (
             <div className='van-card' key={van.id}>
                 <img src={van.imageUrl} alt="van-image" />
-                <div className='card-content'>
-                    <h3>{van.name} </h3>
-                    <p className='price'>{van.price}$ <br /> <span> /day</span></p>
+                <div>
+                    <div className='card-content-about'>
+                        <h3 onClick={() => { navigate(`/vans/${van.id}`) }}>{van.name} </h3>
+                        <p className='price'>{van.price}$ <br /> <span> /day</span></p>
+                    </div>
+                    <i className={`van-type ${van.type} selected`}>{van.type}</i>
                 </div>
-                <i className={`van-type ${van.type} selected`}>{van.type}</i>
             </div>
         );
     }
