@@ -14,7 +14,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #FFF7ED;
-
+  color: #161616
 }
 
 h1 {
@@ -221,6 +221,20 @@ a {
   padding: 2em;
 }
 
+.vans {
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+
+
+}
+
+.vans-title {
+  color: #161616;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 .van-card {
   display: flex;
   flex-direction: column;
@@ -284,6 +298,77 @@ a {
 }
 
 .card-content-about h3:hover {
+  color: #FF6F05;
+  cursor: pointer;
+}
+
+.van-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  background-color: #FFF7ED;
+  color: #000;
+}
+
+.van-details-container>img {
+  width: 30rem;
+  height: 28rem;
+  margin: auto;
+  /* object-fit: cover;
+  object-position: center; */
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .van-details-container>img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.van-details-content>h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #161616;
+  margin: 0;
+}
+
+.van-details-content>.price {
+  font-size: clamp(1rem, 3vw, 1.75rem);
+  color: #4D4D4D;
+}
+
+.van-details-content>p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  line-height: 1.5;
+  margin: 1em 0;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+.van-details-container>button {
+  margin-top: 1em;
+  background: #FF8C38;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.van-details-container>button:hover {
+  background: #FF6F05;
+}
+
+.back-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  margin: 1em 0;
+  color: #161616
+}
+
+.back-nav:hover {
   color: #FF6F05;
   cursor: pointer;
 }

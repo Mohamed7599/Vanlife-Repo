@@ -20,7 +20,7 @@ const Vans = () => {
     }
     );
     return (
-        <>
+        <div className='vans'>
             <nav>
                 <Link to='/'> <span className='logo'>#vanlife</span></Link>
                 <div className='links'>
@@ -28,11 +28,11 @@ const Vans = () => {
                     <Link to='/vans' className='nav-item'>Vans</Link>
                 </div>
             </nav>
-            <h2>Explore our van options</h2>
+            <h2 className='vans-title'>Explore our vans options</h2>
             <div className='vans-container'>
                 {vanElement}
             </div>
-        </>
+        </div>
     );
 }
 
